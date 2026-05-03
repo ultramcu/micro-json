@@ -1,0 +1,24 @@
+# build artefacts
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.elf
+*.hex
+*.bin
+*.map
+
+# editors / OS
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# example demo binary
+ujson_demo
+example/ujson_demo
