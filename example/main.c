@@ -5,11 +5,15 @@
 #include "../ujson.h"
 
 static const char *MSG[] = {
-    "{ \"pt\":\"hb\", \"id\":\"node-01\" }",
-    "{ \"tid\":\"01001\", \"pt\":\"cmd\", \"act\":\"start\", \"ref\":\"1234567890\" }",
-    "{\"k1\":\"v1\",\"k2\":\"v2\",\"k3\":\"v3\"}",
-    "{ \"ver\" : \"01.02.03\" , \"upfw\" : \"yes\" }",
-    /* should fail (missing closing quote on key) */
+    /* simple two-pair object */
+    "{ \"name\":\"hello\", \"mode\":\"demo\" }",
+    /* sensor-style reading, four pairs */
+    "{ \"sensor\":\"temp\", \"value\":\"23.5\", \"unit\":\"C\", \"ok\":\"true\" }",
+    /* compact, no whitespace */
+    "{\"a\":\"1\",\"b\":\"2\",\"c\":\"3\"}",
+    /* generous whitespace + tabs to exercise the skip set */
+    "{ \"user\"\t:\t\"alice\" ,\r\n  \"action\" : \"login\" }",
+    /* malformed: missing closing quote on the key -- should auto-reset */
     "{ \"bad : \"value\" }",
 };
 
