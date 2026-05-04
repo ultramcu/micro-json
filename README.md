@@ -108,20 +108,11 @@ translation units.
 
 ## License
 
-[Mozilla Public License 2.0](LICENSE) — `SPDX-License-Identifier: MPL-2.0`.
+[MIT](LICENSE) — `SPDX-License-Identifier: MIT`.
 
-In short:
-
-- You can drop `ujson.c` / `ujson.h` into any project (open or
-  closed), commercial or otherwise, and link the result freely.
-- If you **modify** `ujson.c` or `ujson.h` themselves, the modified
-  files must remain under MPL 2.0 and their source has to be made
-  available to recipients of the binary.
-- The rest of your application — the firmware around the parser — is
-  not affected and stays under whatever license you choose.
-
-This is *file-level copyleft*: the obligation to share follows the
-modified MPL files, not the surrounding work.
+Drop `ujson.c` / `ujson.h` into any project (open or closed,
+commercial or otherwise). Just keep the copyright + permission
+notice with the source.
 
 ## Origin
 
